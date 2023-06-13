@@ -150,6 +150,32 @@ export class Video {
         initiator: true,
         trickle: false,
         stream: this.data.local.stream,
+        config: {
+          iceServers: [
+            {
+              url: 'stun:global.stun.twilio.com:3478',
+              urls: 'stun:global.stun.twilio.com:3478'
+            },
+            {
+              url: 'turn:global.turn.twilio.com:3478?transport=udp',
+              username: 'c5ea4ac8a340074c30b6461bc2f31bfa8b7b32c33707a76460ef2a8f645ccd32',
+              urls: 'turn:global.turn.twilio.com:3478?transport=udp',
+              credential: 'Q9LgpJuYRWGAbwhHVNSujLyvbywIcXfZrQGIvWdHujY='
+            },
+            {
+              url: 'turn:global.turn.twilio.com:3478?transport=tcp',
+              username: 'c5ea4ac8a340074c30b6461bc2f31bfa8b7b32c33707a76460ef2a8f645ccd32',
+              urls: 'turn:global.turn.twilio.com:3478?transport=tcp',
+              credential: 'Q9LgpJuYRWGAbwhHVNSujLyvbywIcXfZrQGIvWdHujY='
+            },
+            {
+              url: 'turn:global.turn.twilio.com:443?transport=tcp',
+              username: 'c5ea4ac8a340074c30b6461bc2f31bfa8b7b32c33707a76460ef2a8f645ccd32',
+              urls: 'turn:global.turn.twilio.com:443?transport=tcp',
+              credential: 'Q9LgpJuYRWGAbwhHVNSujLyvbywIcXfZrQGIvWdHujY='
+            }
+          ]
+        }
       });
 
       this.peerInstance.on('signal', (data: any) => {
@@ -303,6 +329,32 @@ export class Video {
         initiator: false,
         trickle: false,
         stream: this.data.local.stream,
+        config: {
+          iceServers: [
+            {
+              url: 'stun:global.stun.twilio.com:3478',
+              urls: 'stun:global.stun.twilio.com:3478'
+            },
+            {
+              url: 'turn:global.turn.twilio.com:3478?transport=udp',
+              username: 'c5ea4ac8a340074c30b6461bc2f31bfa8b7b32c33707a76460ef2a8f645ccd32',
+              urls: 'turn:global.turn.twilio.com:3478?transport=udp',
+              credential: 'Q9LgpJuYRWGAbwhHVNSujLyvbywIcXfZrQGIvWdHujY='
+            },
+            {
+              url: 'turn:global.turn.twilio.com:3478?transport=tcp',
+              username: 'c5ea4ac8a340074c30b6461bc2f31bfa8b7b32c33707a76460ef2a8f645ccd32',
+              urls: 'turn:global.turn.twilio.com:3478?transport=tcp',
+              credential: 'Q9LgpJuYRWGAbwhHVNSujLyvbywIcXfZrQGIvWdHujY='
+            },
+            {
+              url: 'turn:global.turn.twilio.com:443?transport=tcp',
+              username: 'c5ea4ac8a340074c30b6461bc2f31bfa8b7b32c33707a76460ef2a8f645ccd32',
+              urls: 'turn:global.turn.twilio.com:443?transport=tcp',
+              credential: 'Q9LgpJuYRWGAbwhHVNSujLyvbywIcXfZrQGIvWdHujY='
+            }
+          ]
+        }
       });
 
       // setup error handler
